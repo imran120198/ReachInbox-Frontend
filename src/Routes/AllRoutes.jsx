@@ -1,7 +1,8 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Login from "../Components/Login";
-import Home from "../Components/Home";
+import Home from "../Pages/Home";
+import Inbox from "../Pages/Inbox";
 
 const AllRoutes = () => {
   return (
@@ -9,6 +10,7 @@ const AllRoutes = () => {
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/inbox" element={<Inbox />} />
       </Routes>
     </div>
   );

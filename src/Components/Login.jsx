@@ -68,7 +68,7 @@ const Login = () => {
                 <FcGoogle />
                 <Link
                   textDecoration={"none"}
-                  href="https://hiring.reachinbox.xyz/api/v1/auth/google-login?redirect_to=https://reachinbox-frontend-app.netlify.app/onebox"
+                  href="https://hiring.reachinbox.xyz/api/v1/auth/google-login?redirect_to=https://reachinbox-frontend-two.vercel.app/home"
                 >
                   Sign Up with Google
                 </Link>

@@ -128,7 +128,7 @@ const Emails = () => {
       {/* Header */}
       <Flex
         borderBottom="1px"
-        borderColor={colorMode == "light" ? "#D8D8D8" : "#343A40"}
+        borderColor={colorMode == "black" ? "#D8D8D8" : "#343A40"}
         gap="8px"
         padding="20px"
         alignItems="center"

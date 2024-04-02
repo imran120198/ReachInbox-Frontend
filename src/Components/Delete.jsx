@@ -39,7 +39,7 @@ function Delete({ handleShowDeleteBox }) {
       alignItems="center"
       justifyContent="center"
       backgroundColor={
-        colorMode === "light" ? "rgba(0,0,0,0.5)" : "rgba(0,0,0,0.8)"
+        colorMode === "black" ? "rgba(0,0,0,0.5)" : "rgba(0,0,0,0.8)"
       }
       zIndex="90"
     >

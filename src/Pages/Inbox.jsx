@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from "react";
-import Navbar from "../Components/Navbar";
 import Sidebar from "../Components/Sidebar";
 import { Box, Flex, useColorMode } from "@chakra-ui/react";
 import SideInbox from "../Components/SideInbox";
 import Emails from "../Components/Emails";
 import Details from "../Components/Details";
 import axios from "axios";
-import { useLocation } from "react-router-dom";
-
+import Navbar from "../Components/Navbar";
 
 const fetchData = async (token) => {
   try {
@@ -28,9 +26,8 @@ const fetchData = async (token) => {
 
 const Inbox = () => {
   const [data, setData] = useState(null);
-  const location = useLocation();
   const token =
-    new URLSearchParams(location.search).get("token") ||
+    new URLSearchParams(window.location.search).get("token") ||
     "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImVtYWlsIjoic2hhaGFuZXByaXlhbmthczAxQGdtYWlsLmNvbSIsImlkIjo5LCJmaXJzdE5hbWUiOiJQcml5YW5rYSIsImxhc3ROYW1lIjoiU2hhaGFuZSJ9LCJpYXQiOjE3MTE1MTA3NDEsImV4cCI6MTc0MzA0Njc0MX0.y9LmDEUdIipLhK-jvH2uFdnaQCfXQ1FbDgxmElWTuzU";
 
   localStorage.setItem("token", token);
@@ -48,6 +45,7 @@ const Inbox = () => {
     }
   }, [token]);
   const { colorMode } = useColorMode();
+
   return (
     <div>
       <Flex>
@@ -56,7 +54,7 @@ const Inbox = () => {
           <Navbar />
           <Flex mt={"27px"}>
             <SideInbox emails={data} />
-            <Box w="60%" bgColor={colorMode == "light" ? "White" : "black"}>
+            <Box w="60%" bgColor={colorMode === "light" ? "White" : "black"}>
               <Emails />
             </Box>
             <Details data={data} />

@@ -1,5 +1,13 @@
 import React from "react";
-import { Box, Image, Text, Flex, useColorMode, Icon } from "@chakra-ui/react";
+import {
+  Box,
+  Image,
+  Text,
+  Flex,
+  useColorMode,
+  Icon,
+  useDisclosure,
+} from "@chakra-ui/react";
 import {
   MdHome,
   MdPersonSearch,

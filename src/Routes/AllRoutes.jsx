@@ -11,6 +11,7 @@ const AllRoutes = () => {
         <Route path="/" element={<Login />} />
         <Route path="/home" element={<Home />} />
         <Route path="/inbox" element={<Inbox />} />
+        <Route path="/inbox/:threadId" element={<Inbox />} />
       </Routes>
     </div>
   );

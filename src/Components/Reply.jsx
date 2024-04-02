@@ -109,7 +109,7 @@ const Reply = ({ threadId, token }) => {
             position="fixed"
             marginLeft="7px"
             bottom="7px"
-            color={colorMode == "light" ? "white" : "white"}
+            color={colorMode === "light" ? "white" : "white"}
           >
             Reply
           </Button>
@@ -120,35 +120,35 @@ const Reply = ({ threadId, token }) => {
           ml="15px"
           w="50vw"
           h="60vh"
-          bgColor={colorMode == "light" ? "gray.100" : "#141517"}
+          bgColor={colorMode === "light" ? "gray.100" : "#141517"}
         >
           <PopoverHeader
             fontFamily="Open Sans"
             fontWeight="700"
             fontSize="12px"
-            bgColor={colorMode == "light" ? "gray.200" : "#23272C"}
-            color={colorMode == "light" ? "black" : "#BAB9BD"}
+            bgColor={colorMode === "light" ? "gray.200" : "#23272C"}
+            color={colorMode === "light" ? "black" : "#BAB9BD"}
           >
             Reply
           </PopoverHeader>
 
           <PopoverCloseButton />
           <PopoverBody
-            bgColor={colorMode == "light" ? "gray.100" : "#141517"}
+            bgColor={colorMode === "light" ? "gray.100" : "#141517"}
             padding="0"
           >
-            <Stack bgColor={colorMode == "light" ? "gray.100" : "#141517"}>
+            <Stack bgColor={colorMode === "light" ? "gray.100" : "#141517"}>
               <InputGroup
                 w="100%"
                 p="0px 32px 8px 32px"
                 borderBottom="1px"
-                borderColor={colorMode == "light" ? "gray.300" : "#34383D"}
+                borderColor={colorMode === "light" ? "gray.300" : "#34383D"}
                 variant="unstyled"
               >
                 <InputLeftAddon
                   // textAlign='right'
-                  bgColor={colorMode == "light" ? "gray.100" : "#141517"}
-                  color={colorMode == "light" ? "gray.500" : "#BAB9BD"}
+                  bgColor={colorMode === "light" ? "gray.100" : "#141517"}
+                  color={colorMode === "light" ? "gray.500" : "#BAB9BD"}
                 >
                   To:
                 </InputLeftAddon>
@@ -157,7 +157,7 @@ const Reply = ({ threadId, token }) => {
                   name="to"
                   value={data.to}
                   onChange={handleChange}
-                  color={colorMode == "light" ? "black" : "#E7E7E7"}
+                  color={colorMode === "light" ? "black" : "#E7E7E7"}
                   placeholder="jeane@icloud.com"
                 />
               </InputGroup>
@@ -165,13 +165,13 @@ const Reply = ({ threadId, token }) => {
                 w="100%"
                 p="0px 32px 8px 32px"
                 borderBottom="1px"
-                borderColor={colorMode == "light" ? "gray.300" : "#34383D"}
+                borderColor={colorMode === "light" ? "gray.300" : "#34383D"}
                 variant="unstyled"
               >
                 <InputLeftAddon
                   // textAlign='right'
-                  bgColor={colorMode == "light" ? "gray.100" : "#141517"}
-                  color={colorMode == "light" ? "gray.500" : "#BAB9BD"}
+                  bgColor={colorMode === "light" ? "gray.100" : "#141517"}
+                  color={colorMode === "light" ? "gray.500" : "#BAB9BD"}
                 >
                   From:
                 </InputLeftAddon>
@@ -180,7 +180,7 @@ const Reply = ({ threadId, token }) => {
                   name="from"
                   value={data.from}
                   onChange={handleChange}
-                  color={colorMode == "light" ? "black" : "#E7E7E7"}
+                  color={colorMode === "light" ? "black" : "#E7E7E7"}
                   placeholder="peter@reachinbox.com"
                 />
               </InputGroup>
@@ -189,13 +189,13 @@ const Reply = ({ threadId, token }) => {
                 w="100%"
                 p="0px 32px 8px 32px"
                 borderBottom="1px"
-                borderColor={colorMode == "light" ? "gray.300" : "#34383D"}
+                borderColor={colorMode === "light" ? "gray.300" : "#34383D"}
                 variant="unstyled"
               >
                 <InputLeftAddon
                   // textAlign='right'
-                  bgColor={colorMode == "light" ? "gray.100" : "#141517"}
-                  color={colorMode == "light" ? "gray.500" : "#BAB9BD"}
+                  bgColor={colorMode === "light" ? "gray.100" : "#141517"}
+                  color={colorMode === "light" ? "gray.500" : "#BAB9BD"}
                 >
                   Subject:
                 </InputLeftAddon>
@@ -204,7 +204,7 @@ const Reply = ({ threadId, token }) => {
                   name="subject"
                   value={data.subject}
                   onChange={handleChange}
-                  color={colorMode == "light" ? "black" : "#E7E7E7"}
+                  color={colorMode === "light" ? "black" : "#E7E7E7"}
                   placeholder="Warmup Welcome"
                 />
               </InputGroup>
@@ -222,7 +222,7 @@ const Reply = ({ threadId, token }) => {
                   name="body"
                   value={data.body}
                   onChange={handleChange}
-                  color={colorMode == "light" ? "black" : "white"}
+                  color={colorMode === "light" ? "black" : "white"}
                   placeholder="Hi Jeanne,"
                 />
               </InputGroup>
@@ -231,11 +231,11 @@ const Reply = ({ threadId, token }) => {
             <Flex
               w="98%"
               borderTop="1px"
-              borderColor={colorMode == "light" ? "gray.300" : "#34383D"}
+              borderColor={colorMode === "light" ? "gray.300" : "#34383D"}
               position="fixed"
               bottom="0"
               padding="7px 12px"
-              color={colorMode == "light" ? "white" : "#ADADAD"}
+              color={colorMode === "light" ? "white" : "#ADADAD"}
             >
               <Button
                 padding="8px 20px"
@@ -243,7 +243,7 @@ const Reply = ({ threadId, token }) => {
                 fontFamily="Open Sans"
                 fontWeight="600"
                 fontSize="14px"
-                color={colorMode == "light" ? "white" : "#ADADAD"}
+                color={colorMode === "light" ? "white" : "#ADADAD"}
                 bgGradient="linear(to-r, rgba(75, 99, 221, 1), rgba(5, 36, 191, 0.99))"
                 _hover={{
                   bgGradient:
@@ -259,27 +259,18 @@ const Reply = ({ threadId, token }) => {
 
               <Button
                 colorScheme="none"
-                color={colorMode == "light" ? "blackAlpha.700" : "#ADADAD"}
+                color={colorMode === "light" ? "blackAlpha.700" : "#ADADAD"}
                 leftIcon={<MdFlashOn />}
               >
                 Variables
               </Button>
               <Button
                 colorScheme="none"
-                color={colorMode == "light" ? "blackAlpha.700" : "#ADADAD"}
+                color={colorMode === "light" ? "blackAlpha.700" : "#ADADAD"}
                 leftIcon={<MdOutlineRemoveRedEye />}
               >
                 Preview Emails
               </Button>
-              {/* <Flex gap="16px" alignItems="center">
-                {svgList.map((item, i) => (
-                  <Image
-                    key={i}
-                    cursor="pointer"
-                    src={colorMode == "light" ? item.lightSvg : item.darkSvg}
-                  />
-                ))}
-              </Flex> */}
             </Flex>
           </PopoverBody>
         </PopoverContent>

@@ -26,7 +26,7 @@ const SideInbox = ({ emails }) => {
   const navigate = useNavigate();
 
   const handleClick = (threadId) => {
-    navigate(`/${threadId}`);
+    navigate(`/inbox/${threadId}`);
   };
 
   return (

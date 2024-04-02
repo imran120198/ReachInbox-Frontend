@@ -16,7 +16,7 @@ const user = {
   Name: "Imran",
   "Contact No": "+91-6204459226",
   "Email Id": "ik08941@gmail.com",
-  LinkedIn: "https://www.linkedin.com/in/imran-khan-94439a135/",
+  LinkedIn: "imran-khan-94439a135/",
   "Company Name": "Reachinbox",
 };
 
@@ -61,6 +61,7 @@ const Details = () => {
       borderColor={colorMode == "light" ? "#D8D8D8" : "#343A40"}
       textAlign="left"
       padding="16px 5px"
+      fontFamily="Open Sans"
     >
       <Heading
         {...headingStyle}
@@ -70,7 +71,7 @@ const Details = () => {
         Lead Details
       </Heading>
 
-      <Stack padding="8px 12px 16px 12px">
+      <Stack padding="8px 12px 16px 12px" fontFamily="Open Sans">
         <Flex {...styleProps}>
           <Text color={colorMode == "light" ? "#637381" : "white"}>Name</Text>
           <Text color={colorMode == "light" ? "black" : "#B9B9B9"}>
